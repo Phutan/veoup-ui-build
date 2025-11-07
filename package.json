@@ -1,0 +1,38 @@
+{
+  "name": "veoup-ui-electron",
+  "version": "1.0.0",
+  "private": true,
+  "main": "electron.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "dist": "npm run build && electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.veoup.ui",
+    "productName": "VeoUp UI",
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "veoup-icon.ico"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "veoup-icon.ico"
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0"
+  }
+}
